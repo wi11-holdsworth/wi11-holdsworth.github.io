@@ -7,7 +7,11 @@
       name="description"
       content="The mementos and musings of Will Holdsworth"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resources/stylesheets/style.css" />
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+    ></script>
     <title>Will Holdsworth</title>
   </head>
   <body>
@@ -24,7 +28,16 @@
       </nav>
     </header>
     <main>
-      <section id="home"></section>
+      <section id="home">
+        <model-viewer
+          alt="Maxwell the cat"
+          src="resources/img/cat.glb"
+          shadow-intensity="1"
+          camera-controls
+          touch-action="pan-y"
+          style="width: 100%; height: 500px"
+        ></model-viewer>
+      </section>
       <section id="about"></section>
       <section id="portfolio"></section>
       <section id="blog"></section>
@@ -42,7 +55,7 @@
         <textarea
           readonly=""
           rows="13"
-          style="max-width: 70ch"
+          style="max-width: 67ch"
           disabled
           aria-label="PGP key"
         >
