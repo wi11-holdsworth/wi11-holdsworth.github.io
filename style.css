@@ -7,14 +7,14 @@
 
   --textcolor: #121212;
   --bgcolor: #fff;
-  --highlight: #ff7538;
+  --highlight: #ff4f00;
 }
 
 @media (prefers-color-scheme: dark) {
   * {
     --textcolor: #dadada;
     --bgcolor: #141414;
-    --highlight: #ff4f00;
+    --highlight: #ff7538;
   }
 }
 
