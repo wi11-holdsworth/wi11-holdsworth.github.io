@@ -43,7 +43,7 @@
       <section id="blog"></section>
       <section id="photos"></section>
       <section id="contact">
-        <h1>Contact</h1>
+        <h1>👋 Contact</h1>
         <p>
           Please encrypt your emails using
           <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy/">PGP</a>.
@@ -51,7 +51,25 @@
           <a href="https://mailvelope.com/">mailvelope</a> extension. I tend to
           reply within the day.
         </p>
-        <h2>PGP Public Key</h2>
+        <h2>🌏 Timezone</h2>
+        It's currently <span id="clock"></span> in Melbourne, Australia.
+        <script>
+          function updateTime() {
+            const options = {
+              timeZone: "Australia/Melbourne",
+              hour12: false,
+              hour: "2-digit",
+              minute: "2-digit",
+            };
+            const timeString = new Intl.DateTimeFormat([], options).format(
+              new Date()
+            );
+            document.getElementById("clock").textContent = timeString;
+          }
+          updateTime();
+          setInterval(updateTime, 1000 * 60);
+        </script>
+        <h2>🔐 PGP Public Key</h2>
         <textarea
           readonly=""
           rows="13"
@@ -73,7 +91,8 @@ fnsi2iMCpjYayHFwysi9EmNzyQI=
 =Pifx
 -----END PGP PUBLIC KEY BLOCK-----</textarea
         >
-        <h2>Email address</h2>
+
+        <h2>📧 Email address</h2>
         <a
           href="mailto:spender-dab-fondly@duck.com"
           target="_blank"
